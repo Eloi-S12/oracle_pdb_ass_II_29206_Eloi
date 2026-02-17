@@ -47,7 +47,7 @@ ALTER SESSION SET CONTAINER = EL_pdb_29206;
 GRANT CONNECT, RESOURCE, DBA TO Eloi_plsqlauca_29206;
 ```
 
-**for example**
+**evidence**
 **Create PDB with admin user**
 ![Images/PDB_Created.png](Images/PDB_Created.png)
 **Open PDB for access**
@@ -87,7 +87,7 @@ ALTER PLUGGABLE DATABASE El_to_delete_pdb_29206 CLOSE IMMEDIATE;
 DROP PLUGGABLE DATABASE El_to_delete_pdb_29206 INCLUDING DATAFILES;
 ```
 
-**for example**
+**evidence**
 **Create temporary PDB**
 ![Images/Temp_Created.png](Images/Temp_Created.png)
 **Open and verify**
@@ -135,6 +135,8 @@ DROP PLUGGABLE DATABASE El_to_delete_pdb_29206 INCLUDING DATAFILES;
 2. Reconnected using `sqlplus / as sysdba` from command prompt
 3. Verified connection with `SHOW USER` (confirmed SYS)
 4. Successfully executed PDB operations
+
+![Images/connected_sysdba.png](Images/connected_sysdba.png)
 
 **Key Takeaway:** Administrative operations on PDBs require SYSDBA privileges. Always verify connection role before executing management commands.
 
