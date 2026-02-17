@@ -47,6 +47,9 @@ ALTER SESSION SET CONTAINER = EL_pdb_29206;
 GRANT CONNECT, RESOURCE, DBA TO Eloi_plsqlauca_29206;
 ```
 
+**for example**
+![]
+
 **Deliverables:**
 - ✓ PDB creation command with success confirmation
 - ✓ PDB operational in READ WRITE mode
