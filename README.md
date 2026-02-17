@@ -4,26 +4,24 @@
 - **Name:** SONGA ELOI
 - **Student ID:** 29206
 - **Course:** Database Development with PL/SQL (INSY 8311)
-- **Submission Date:** February 13, 2026
+- **Submission Date:** February 17, 2026
 
----
 
 ## Assignment Overview
 
 This assignment demonstrates practical Oracle Multitenant Architecture skills through four core tasks: creating a permanent pluggable database with user management, executing complete PDB lifecycle operations, accessing Oracle Enterprise Manager for monitoring, and producing professional technical documentation.
 
----
+
 
 ## Environment Specifications
 
 | Component | Details |
 |-----------|---------|
 | **Database** | Oracle 21c Express Edition (21.3.0.0.0) |
-| **Operating System** |  Windows 11] |
+| **Operating System** |  Windows 11 |
 | **Tools** | SQL*Plus, Oracle Enterprise Manager |
 | **Architecture** | Multitenant (CDB with PDBs) |
 
----
 
 ## Task Implementation
 
@@ -32,22 +30,21 @@ This assignment demonstrates practical Oracle Multitenant Architecture skills th
 **Objective:** Create a permanent PDB for future coursework
 
 **Configuration:**
-- PDB Name: `[El_pdb_29206]`
-- Status: Operational (READ WRITE mode)
+- PDB Name: `El_pdb_29206`
 
 **Implementation:**
 ```sql
 -- Create PDB with admin user
-CREATE PLUGGABLE DATABASE [pdb_name]
-ADMIN USER [username] IDENTIFIED BY [password]
-FILE_NAME_CONVERT = ('pdbseed', '[pdb_name]');
+CREATE PLUGGABLE DATABASE EL_pdb_29206
+ADMIN USER Eloi_plsqlauca_29206 IDENTIFIED BY 1234
+FILE_NAME_CONVERT = ('pdbseed', 'EL_pdb_29206');
 
 -- Open PDB for access
-ALTER PLUGGABLE DATABASE [pdb_name] OPEN;
+ALTER PLUGGABLE DATABASE EL_pdb_29206 OPEN;
 
 -- Grant privileges to user
-ALTER SESSION SET CONTAINER = [pdb_name];
-GRANT CONNECT, RESOURCE, DBA TO [username];
+ALTER SESSION SET CONTAINER = EL_pdb_29206;
+GRANT CONNECT, RESOURCE, DBA TO Eloi_plsqlauca_29206;
 ```
 
 **Deliverables:**
@@ -55,30 +52,29 @@ GRANT CONNECT, RESOURCE, DBA TO [username];
 - ✓ PDB operational in READ WRITE mode
 - ✓ User created with appropriate privileges
 
----
 
 ### Task 2: Temporary PDB Lifecycle Management
 
 **Objective:** Demonstrate complete PDB creation and deletion process
 
 **Configuration:**
-- Temporary PDB: `[your_temp_pdb_name]`
+- Temporary PDB: `El_to_delete_pdb_29206`
 - Action: Complete lifecycle (create → verify → delete)
 
 **Implementation:**
 ```sql
 -- Create temporary PDB
-CREATE PLUGGABLE DATABASE [temp_pdb_name]
-ADMIN USER temp_admin IDENTIFIED BY [password]
-FILE_NAME_CONVERT = ('pdbseed', '[temp_pdb_name]');
+CREATE PLUGGABLE DATABASE El_to_delete_pdb_29206
+ADMIN USER temp_admin IDENTIFIED BY 1234
+FILE_NAME_CONVERT = ('pdbseed', 'El_to_delete_pdb_29206');
 
 -- Open and verify
-ALTER PLUGGABLE DATABASE [temp_pdb_name] OPEN;
+ALTER PLUGGABLE DATABASE El_to_delete_pdb_29206 OPEN;
 SELECT name, open_mode FROM v$pdbs;
 
 -- Close and remove completely
-ALTER PLUGGABLE DATABASE [temp_pdb_name] CLOSE IMMEDIATE;
-DROP PLUGGABLE DATABASE [temp_pdb_name] INCLUDING DATAFILES;
+ALTER PLUGGABLE DATABASE El_to_delete_pdb_29206 CLOSE IMMEDIATE;
+DROP PLUGGABLE DATABASE El_to_delete_pdb_29206 INCLUDING DATAFILES;
 ```
 
 **Deliverables:**
@@ -87,7 +83,6 @@ DROP PLUGGABLE DATABASE [temp_pdb_name] INCLUDING DATAFILES;
 - ✓ Complete deletion with datafiles removal
 - ✓ Verification showing only main PDB remains
 
----
 
 ### Task 3: Oracle Enterprise Manager Access
 
@@ -103,7 +98,7 @@ DROP PLUGGABLE DATABASE [temp_pdb_name] INCLUDING DATAFILES;
 - ✓ PDB information visible
 - ✓ Username displayed in interface
 
----
+
 
 ## Technical Challenges & Resolutions
 
@@ -121,7 +116,6 @@ DROP PLUGGABLE DATABASE [temp_pdb_name] INCLUDING DATAFILES;
 
 **Key Takeaway:** Administrative operations on PDBs require SYSDBA privileges. Always verify connection role before executing management commands.
 
----
 
 ## Key Learnings
 
@@ -138,14 +132,10 @@ DROP PLUGGABLE DATABASE [temp_pdb_name] INCLUDING DATAFILES;
 - Complete resource cleanup (INCLUDING DATAFILES)
 - Systematic verification at each step
 
----
-
-
----
 
 
 
-I, **[SONGA ELOI]**, Student ID **[29206]**, solemnly declare that:
+I, **SONGA ELOI**, Student ID **29206**, solemnly declare that:
 
 1. This assignment represents my individual work completed without collaboration
 2. All SQL commands were personally executed on my Oracle database installation
@@ -162,6 +152,5 @@ I acknowledge that academic dishonesty violates institutional policies and profe
 
 **Assignment completed with precision, discipline, and integrity.**
 
----
 
-*Repository maintained by [Your Name] | AUCA | February 2026*
+*Repository maintained by Songa eloi | AUCA | February 2026*
