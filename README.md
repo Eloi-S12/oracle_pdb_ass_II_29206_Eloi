@@ -113,6 +113,7 @@ DROP PLUGGABLE DATABASE El_to_delete_pdb_29206 INCLUDING DATAFILES;
 
 **evidence**
 ![Images/OEM%20DASH%201.png](Images/OEM%20DASH%201.png)
+![Images/OEM%20DASH%202.png](Images/OEM%20DASH%202.png)
 
 **Deliverables:**
 - ✓ OEM dashboard accessed successfully
