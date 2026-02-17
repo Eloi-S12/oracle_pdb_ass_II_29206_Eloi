@@ -48,7 +48,15 @@ GRANT CONNECT, RESOURCE, DBA TO Eloi_plsqlauca_29206;
 ```
 
 **for example**
+**Create PDB with admin user**
 ![Images/PDB_Created.png](Images/PDB_Created.png)
+**Open PDB for access**
+![Images/PDB_OPEN.png](Images/PDB_OPEN.png)
+**Grant privileges to user**
+![Images/Inside_PDB.png](Images/Inside_PDB.png)
+![Images/Grant_Privileges.png](Images/Grant_Privileges.png)
+
+
 **Deliverables:**
 - ✓ PDB creation command with success confirmation
 - ✓ PDB operational in READ WRITE mode
@@ -79,6 +87,14 @@ ALTER PLUGGABLE DATABASE El_to_delete_pdb_29206 CLOSE IMMEDIATE;
 DROP PLUGGABLE DATABASE El_to_delete_pdb_29206 INCLUDING DATAFILES;
 ```
 
+**for example**
+**Create temporary PDB**
+![Images/Temp_Created.png](Images/Temp_Created.png)
+**Open and verify**
+![Images/BOTH_PDBS.png](Images/BOTH_PDBS.png)
+**Close and remove completely**
+![Images/Drop_PDB.png](Images/Drop_PDB.png)
+
 **Deliverables:**
 - ✓ Temporary PDB creation verified
 - ✓ Both PDBs visible simultaneously
@@ -94,6 +110,9 @@ DROP PLUGGABLE DATABASE El_to_delete_pdb_29206 INCLUDING DATAFILES;
 - URL: `https://localhost:5500/em`
 - Authentication: SYS as SYSDBA
 - Dashboard View: PDB status and database environment
+
+**evidence**
+![]
 
 **Deliverables:**
 - ✓ OEM dashboard accessed successfully
